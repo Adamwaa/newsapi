@@ -51,10 +51,7 @@ This Spring Boot application demonstrates integration with the NewsAPI to fetch 
 ### Fetch Paginated News from Database
 
 - `GET /api/news/paginated?page={page}&size={size}` - Retrieves news articles from the database with pagination support. Allows specifying `page` and `size` to control the pagination. Articles are sorted by publication date in descending order.
-
-### Fetch News with Custom Path
-
-- `GET /api/news/custom?path={path}` - Fetches news articles using a custom path to the NewsAPI. The `path` parameter should be provided to define the endpoint of the NewsAPI to hit (e.g., `top-headlines`, `everything`).
+- `http://localhost:8080/api/news/paginated?page=0&size=10`
 
 ### Fetch News with Custom Path
 
