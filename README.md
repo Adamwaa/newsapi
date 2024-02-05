@@ -56,6 +56,14 @@ This Spring Boot application demonstrates integration with the NewsAPI to fetch 
 
 - `GET /api/news/custom?path={path}` - Fetches news articles using a custom path to the NewsAPI. The `path` parameter should be provided to define the endpoint of the NewsAPI to hit (e.g., `top-headlines`, `everything`).
 
+### Fetch News with Custom Path
+
+- `GET /api/news/custom?path={path}` - Fetches news articles using a custom path to the NewsAPI. The `path` parameter allows for flexible API endpoint usage, such as `everything?q=tesla&from=2024-01-05&sortBy=publishedAt`. This parameter should include the middle part of the NewsAPI URL that specifies the endpoint and query parameters (excluding the base URL and API key).
+
+For example, to fetch articles about "Tesla" from a specific date, you would use in Postman:
+- `Key: path, Value: everything?q=tesla%26from=2024-01-04%26sortBy=publishedAt.`
+- `http://localhost:8080/api/news/custom?path=everything?q=tesla%26from=2024-01-04%26sortBy=publishedAt`
+
 ## Responses
 
 The API endpoints return JSON-formatted responses with the following status codes:
@@ -85,3 +93,10 @@ The project includes unit tests for the service layer and integration tests for 
 
 ```bash
 mvn test
+```
+
+
+## Example: 
+
+![2024-02-04_21h21_50-ezgif com-crop](https://github.com/Adamwaa/newsapi/assets/97319080/41e7c295-a227-4f73-b24f-3d7cbb8ebd32)
+
